@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cim23pyqwtmwl"]
+[gd_scene load_steps=7 format=4 uid="uid://cim23pyqwtmwl"]
 
 [ext_resource type="Texture2D" uid="uid://bq10pilniidi2" path="res://assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dcvm45sgidy16" path="res://scenes/diabunny.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c8woge8klkdhi" path="res://scenes/kast.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://b1wfvrhvpqc15" path="res://scenes/killren.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
@@ -166,11 +167,8 @@ tile_map_data = PackedByteArray("AAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAA
 tile_set = SubResource("TileSet_iywne")
 
 [node name="Diabunny" parent="." instance=ExtResource("2_lnu2h")]
-
-[node name="Camera2D" type="Camera2D" parent="Diabunny"]
-position = Vector2(105, -57)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
+visible = false
+position = Vector2(-2, -32)
 
 [node name="kast" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(266, 4)
@@ -178,3 +176,11 @@ position = Vector2(266, 4)
 [node name="Kast" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(-80, -29)
 scale = Vector2(-1, 1)
+
+[node name="Killren" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(81, -17)
+
+[node name="Camera2D" type="Camera2D" parent="Killren"]
+position = Vector2(22, -72)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true

@@ -7,7 +7,6 @@ const JUMP_VELOCITY = -300.0
 const DASH_SPEED = 400
 const DASH_DURATION = 0.1
 
-
 #@onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var state_machine = $StateMachine
@@ -19,7 +18,7 @@ var is_attacking = false
 var is_dashing = false
 var combo_count = 0
 var combo_timer = 0.0
-var combo_window = 0.5  
+var combo_window = 0.8  
 
 func _ready():
 	# Ensure state machine is properly initialized after all nodes are ready

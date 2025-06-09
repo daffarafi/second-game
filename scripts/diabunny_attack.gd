@@ -38,11 +38,11 @@ func Enter():
 	var wait_time = 0.2
 	match current_animation:
 		"basic_attack_1":
-			wait_time = 0.2
+			wait_time = 0.4
 		"basic_attack_2":
 			wait_time = 0.2667
 		"basic_attack_3":
-			wait_time = 0.3
+			wait_time = 0.2667
 	
 	timer.wait_time = wait_time
 	timer.one_shot = true

@@ -1,0 +1,380 @@
+[gd_scene load_steps=73 format=3 uid="uid://b1wfvrhvpqc15"]
+
+[ext_resource type="Script" uid="uid://d18bpf2degeoh" path="res://scripts/killren.gd" id="1_6nsae"]
+[ext_resource type="Script" uid="uid://bs0loe31o220t" path="res://scripts/hitbox.gd" id="2_dky2g"]
+[ext_resource type="Texture2D" uid="uid://fdlhwn1fm0lc" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack1.png" id="3_m1xnq"]
+[ext_resource type="Texture2D" uid="uid://e3i5ot0ewuwg" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack2.png" id="4_4ek22"]
+[ext_resource type="Texture2D" uid="uid://b0k1puff1cifp" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack3.png" id="5_umtmb"]
+[ext_resource type="Texture2D" uid="uid://bjg07111hsgmx" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack4.png" id="6_p0l2w"]
+[ext_resource type="Texture2D" uid="uid://dvd667sggledb" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack5.png" id="7_q8rvx"]
+[ext_resource type="Texture2D" uid="uid://fc6iegkqxfua" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack6.png" id="8_hs0yp"]
+[ext_resource type="Texture2D" uid="uid://b84vfv244peo1" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack7.png" id="9_42p1n"]
+[ext_resource type="Texture2D" uid="uid://ecdxt47sk7lg" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack8.png" id="10_6nsae"]
+[ext_resource type="Texture2D" uid="uid://cihsw44pkcn6i" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack9.png" id="11_0d11f"]
+[ext_resource type="Texture2D" uid="uid://cql6eirneggsi" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack10.png" id="12_dky2g"]
+[ext_resource type="Texture2D" uid="uid://0ey5yf66sn4g" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack11.png" id="13_xq8se"]
+[ext_resource type="Texture2D" uid="uid://dx5a16vq6u7a6" path="res://assets/characters/diabunny/diabunny_dash/diabunny_walk6.png" id="14_5jkj7"]
+[ext_resource type="Texture2D" uid="uid://c072g5vd05d5c" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack12.png" id="14_m1xnq"]
+[ext_resource type="Texture2D" uid="uid://c2wnmer54dq74" path="res://assets/characters/killren/killren_breath/killren_breath1.png" id="15_42p1n"]
+[ext_resource type="Texture2D" uid="uid://c0iabydl5ece7" path="res://assets/characters/diabunny/diabunny_idle/diabunny_idle1.png" id="15_jar1r"]
+[ext_resource type="Texture2D" uid="uid://cfti07ln61ay3" path="res://assets/characters/killren/killren_breath/killren_breath2.png" id="16_6nsae"]
+[ext_resource type="Texture2D" uid="uid://bxd3vfqasxko4" path="res://assets/characters/killren/killren_jump/killren_jump2.png" id="20_xq8se"]
+[ext_resource type="Texture2D" uid="uid://uq6jh0uyoe6o" path="res://assets/characters/killren/killren_jump/killren_jump3.png" id="21_m1xnq"]
+[ext_resource type="Texture2D" uid="uid://dysbrpwyd5v6t" path="res://assets/characters/killren/killren_jump/killren_jump4.png" id="22_4ek22"]
+[ext_resource type="Texture2D" uid="uid://583jqg16tvcf" path="res://assets/characters/killren/killren_jump/killren_jump5.png" id="23_umtmb"]
+[ext_resource type="Texture2D" uid="uid://dmxxqdegr7u3e" path="res://assets/characters/killren/killren_jump/killren_jump6.png" id="24_p0l2w"]
+[ext_resource type="Texture2D" uid="uid://oyglu7vps7uv" path="res://assets/characters/killren/killren_jump/killren_jump7.png" id="25_q8rvx"]
+[ext_resource type="Texture2D" uid="uid://wn38cvcjov7l" path="res://assets/characters/killren/killren_jump/killren_jump8.png" id="26_hs0yp"]
+[ext_resource type="Texture2D" uid="uid://0uaplq7v2kg1" path="res://assets/characters/killren/killren_jump/killren_jump9.png" id="27_aa3fu"]
+[ext_resource type="Texture2D" uid="uid://vgdoxcppjllo" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock1.png" id="28_2mlq8"]
+[ext_resource type="Texture2D" uid="uid://cwind7m0fbmjx" path="res://assets/characters/killren/killren_jump/killren_jump10.png" id="28_ubpuv"]
+[ext_resource type="Texture2D" uid="uid://nyass3sa0jj7" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock2.png" id="29_yyy5q"]
+[ext_resource type="Texture2D" uid="uid://bbf4078ednbni" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock3.png" id="30_oq3ti"]
+[ext_resource type="Texture2D" uid="uid://bfge572deyo0g" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock4.png" id="31_bble2"]
+[ext_resource type="Texture2D" uid="uid://jo1yk508034f" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock5.png" id="32_cm6wm"]
+[ext_resource type="Texture2D" uid="uid://yfpvc233o4lm" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock6.png" id="33_k1j2g"]
+[ext_resource type="Texture2D" uid="uid://cpwddqtf6opts" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock7.png" id="34_klcpq"]
+[ext_resource type="Texture2D" uid="uid://doyhe7veok8xa" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock8.png" id="35_o5the"]
+[ext_resource type="Texture2D" uid="uid://bmgepv44jfh1e" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock9.png" id="36_ovxjs"]
+[ext_resource type="Texture2D" uid="uid://bqan1yqht2ddg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock10.png" id="37_2jv66"]
+[ext_resource type="Texture2D" uid="uid://bro514c8dm0bl" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock11.png" id="38_kptwf"]
+[ext_resource type="Texture2D" uid="uid://bxc8lgj861w1p" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock12.png" id="39_xpu7w"]
+[ext_resource type="Texture2D" uid="uid://deu2pdubmx4gg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock13.png" id="40_rrug3"]
+[ext_resource type="Texture2D" uid="uid://cnfuj6ukd36kt" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock14.png" id="41_nd4hk"]
+[ext_resource type="Texture2D" uid="uid://coxsvxxjapn0e" path="res://assets/characters/killren/killren_wak/killren_wak1.png" id="42_42p1n"]
+[ext_resource type="Texture2D" uid="uid://de0udmee56ex8" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock15.png" id="42_feood"]
+[ext_resource type="Texture2D" uid="uid://ccwlxphb7nd48" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock16.png" id="43_0qa7w"]
+[ext_resource type="Texture2D" uid="uid://26fc5gmgutss" path="res://assets/characters/killren/killren_wak/killren_wak2.png" id="43_6nsae"]
+[ext_resource type="Texture2D" uid="uid://cnmipm6x0mpj8" path="res://assets/characters/killren/killren_wak/killren_wak3.png" id="44_0d11f"]
+[ext_resource type="Texture2D" uid="uid://brijxfbs6qopw" path="res://assets/characters/killren/killren_wak/killren_wak4.png" id="45_dky2g"]
+[ext_resource type="Texture2D" uid="uid://b2abeajnwjyx7" path="res://assets/characters/killren/killren_wak/killren_wak5.png" id="46_xq8se"]
+[ext_resource type="Texture2D" uid="uid://dkxlj4qbp4wmx" path="res://assets/characters/killren/killren_wak/killren_wak6.png" id="47_m1xnq"]
+[ext_resource type="Texture2D" uid="uid://wypjcg4fu0ml" path="res://assets/characters/killren/killren_wak/killren_wak7.png" id="48_4ek22"]
+[ext_resource type="Texture2D" uid="uid://d1abloys4j21l" path="res://assets/characters/killren/killren_wak/killren_wak8.png" id="49_umtmb"]
+[ext_resource type="Texture2D" uid="uid://ja3qodm3g4qe" path="res://assets/characters/killren/killren_wak/killren_wak9.png" id="50_p0l2w"]
+[ext_resource type="Texture2D" uid="uid://t40my8ckaxsy" path="res://assets/characters/killren/killren_wak/killren_wak10.png" id="51_q8rvx"]
+[ext_resource type="Script" uid="uid://ckcbc1rg8ek82" path="res://scripts/state_machine.gd" id="54_wpnut"]
+[ext_resource type="Script" uid="uid://clw25os3cbvq5" path="res://scripts/diabunny_idle.gd" id="55_qeo6j"]
+[ext_resource type="Script" uid="uid://dfgymo5yg5kf5" path="res://scripts/diabunny_jump.gd" id="56_wy12j"]
+[ext_resource type="Script" uid="uid://j5ye8i5rb1u3" path="res://scripts/diabunny_walk.gd" id="57_jw51v"]
+[ext_resource type="Script" uid="uid://c4mspb3edvnwq" path="res://scripts/diabunny_attack.gd" id="58_4p0tl"]
+[ext_resource type="Script" uid="uid://clrtd6vpu3yt5" path="res://scripts/diabunny_skill.gd" id="59_fgajf"]
+[ext_resource type="Script" uid="uid://dp6hjhrsfkyvd" path="res://scripts/diabunny_dash.gd" id="60_m377s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d11f"]
+
+[sub_resource type="Animation" id="Animation_m1tbd"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Hitbox/CollisionShape2D1:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_jar1r")]
+}
+
+[sub_resource type="Animation" id="Animation_hdmh4"]
+resource_name = "basic_attack_1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_m1xnq"), ExtResource("4_4ek22"), ExtResource("5_umtmb"), ExtResource("6_p0l2w"), ExtResource("7_q8rvx"), ExtResource("8_hs0yp")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [2],
+"method": &"move_front"
+}, {
+"args": [-2],
+"method": &"move_front"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Hitbox/CollisionShape2D1:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.191854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_c8qpr"]
+resource_name = "basic_attack_2"
+length = 0.2667
+step = 0.0333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_hs0yp"), ExtResource("9_42p1n"), ExtResource("10_6nsae"), ExtResource("11_0d11f")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.133333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [-3],
+"method": &"move_front"
+}, {
+"args": [-2],
+"method": &"move_front"
+}, {
+"args": [-3],
+"method": &"move_front"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3kyhe"]
+resource_name = "basic_attack_3"
+length = 0.2667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_dky2g"), ExtResource("13_xq8se"), ExtResource("14_m1xnq"), ExtResource("3_m1xnq")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [3],
+"method": &"move_front"
+}, {
+"args": [3],
+"method": &"move_front"
+}, {
+"args": [3],
+"method": &"move_front"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vy7na"]
+resource_name = "dash"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_5jkj7")]
+}
+
+[sub_resource type="Animation" id="Animation_7ert3"]
+resource_name = "idle"
+length = 0.133
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("15_42p1n"), ExtResource("16_6nsae")]
+}
+
+[sub_resource type="Animation" id="Animation_5tu1h"]
+resource_name = "jump"
+length = 0.6666
+step = 0.0333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666663, 0.133333, 0.2, 0.266666, 0.333333, 0.4, 0.466666, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("20_xq8se"), ExtResource("21_m1xnq"), ExtResource("22_4ek22"), ExtResource("23_umtmb"), ExtResource("24_p0l2w"), ExtResource("25_q8rvx"), ExtResource("26_hs0yp"), ExtResource("27_aa3fu"), ExtResource("28_ubpuv")]
+}
+
+[sub_resource type="Animation" id="Animation_imk20"]
+resource_name = "skill"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6, 0.665012, 0.733333, 0.8, 0.866667, 0.933333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("28_2mlq8"), ExtResource("29_yyy5q"), ExtResource("30_oq3ti"), ExtResource("31_bble2"), ExtResource("32_cm6wm"), ExtResource("33_k1j2g"), ExtResource("34_klcpq"), ExtResource("35_o5the"), ExtResource("36_ovxjs"), ExtResource("37_2jv66"), ExtResource("38_kptwf"), ExtResource("39_xpu7w"), ExtResource("40_rrug3"), ExtResource("41_nd4hk"), ExtResource("42_feood"), ExtResource("43_0qa7w")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.133333, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [1],
+"method": &"move_front"
+}, {
+"args": [6],
+"method": &"move_front"
+}, {
+"args": [3],
+"method": &"move_front"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_rf6df"]
+resource_name = "walk"
+length = 0.6667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("42_42p1n"), ExtResource("43_6nsae"), ExtResource("44_0d11f"), ExtResource("45_dky2g"), ExtResource("46_xq8se"), ExtResource("47_m1xnq"), ExtResource("48_4ek22"), ExtResource("49_umtmb"), ExtResource("50_p0l2w"), ExtResource("51_q8rvx")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_terya"]
+_data = {
+&"RESET": SubResource("Animation_m1tbd"),
+&"basic_attack_1": SubResource("Animation_hdmh4"),
+&"basic_attack_2": SubResource("Animation_c8qpr"),
+&"basic_attack_3": SubResource("Animation_3kyhe"),
+&"dash": SubResource("Animation_vy7na"),
+&"idle": SubResource("Animation_7ert3"),
+&"jump": SubResource("Animation_5tu1h"),
+&"skill": SubResource("Animation_imk20"),
+&"walk": SubResource("Animation_rf6df")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qf34"]
+height = 36.0
+
+[node name="Killren" type="CharacterBody2D"]
+script = ExtResource("1_6nsae")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, -1)
+texture = ExtResource("15_jar1r")
+flip_h = true
+
+[node name="Hitbox" type="Area2D" parent="Sprite2D"]
+script = ExtResource("2_dky2g")
+metadata/_custom_type_script = "uid://bs0loe31o220t"
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Sprite2D/Hitbox"]
+position = Vector2(14, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_0d11f")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_terya")
+}
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_2qf34")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("54_wpnut")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("55_qeo6j")
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("56_wy12j")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("57_jw51v")
+
+[node name="BasicAttack" type="Node" parent="StateMachine"]
+script = ExtResource("58_4p0tl")
+
+[node name="Skill" type="Node" parent="StateMachine"]
+script = ExtResource("59_fgajf")
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource("60_m377s")
