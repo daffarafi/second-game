@@ -1,5 +1,5 @@
 extends State
-class_name Idle
+class_name KillrenIdle
 
 @onready var killren: CharacterBody2D = get_parent().get_parent()
 

@@ -1,5 +1,5 @@
 extends State
-class_name BasicAttack
+class_name KillrenBasicAttack
 
 @onready var killren: CharacterBody2D = get_parent().get_parent()
 var current_animation = "basic_attack_1"

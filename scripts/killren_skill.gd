@@ -1,5 +1,5 @@
 extends State
-class_name Skill
+class_name KillrenSkill
 
 @onready var killren: CharacterBody2D = get_parent().get_parent()
 

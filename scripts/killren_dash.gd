@@ -1,5 +1,5 @@
 extends State
-class_name Dash
+class_name KillrenDash
 
 @onready var killren: CharacterBody2D = get_parent().get_parent()
 @onready var sprite: Sprite2D = killren.get_node("Sprite2D")

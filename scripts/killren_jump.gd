@@ -1,5 +1,5 @@
 extends State
-class_name Jump
+class_name KillrenJump
 
 @onready var killren: CharacterBody2D = get_parent().get_parent()
 

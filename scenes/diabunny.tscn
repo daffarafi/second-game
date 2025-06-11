@@ -1,57 +1,59 @@
-[gd_scene load_steps=74 format=3 uid="uid://dcvm45sgidy16"]
+[gd_scene load_steps=76 format=3 uid="uid://dcvm45sgidy16"]
 
 [ext_resource type="Script" uid="uid://coeggm3fmn4t7" path="res://scripts/diabunny.gd" id="1_rp3ui"]
-[ext_resource type="Texture2D" uid="uid://c2wnmer54dq74" path="res://assets/characters/killren/killren_breath/killren_breath1.png" id="2_7ert3"]
-[ext_resource type="Texture2D" uid="uid://fdlhwn1fm0lc" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack1.png" id="4_7ert3"]
-[ext_resource type="Texture2D" uid="uid://e3i5ot0ewuwg" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack2.png" id="5_5tu1h"]
-[ext_resource type="Texture2D" uid="uid://b0k1puff1cifp" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack3.png" id="6_rf6df"]
-[ext_resource type="Texture2D" uid="uid://bjg07111hsgmx" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack4.png" id="7_c8qpr"]
-[ext_resource type="Texture2D" uid="uid://dvd667sggledb" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack5.png" id="8_3kyhe"]
-[ext_resource type="Texture2D" uid="uid://fc6iegkqxfua" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack6.png" id="9_vy7na"]
-[ext_resource type="Texture2D" uid="uid://b84vfv244peo1" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack7.png" id="10_8cfsb"]
-[ext_resource type="Texture2D" uid="uid://ecdxt47sk7lg" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack8.png" id="11_1r1c3"]
-[ext_resource type="Texture2D" uid="uid://cihsw44pkcn6i" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack9.png" id="12_7bn22"]
-[ext_resource type="Texture2D" uid="uid://cql6eirneggsi" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack10.png" id="13_sp474"]
-[ext_resource type="Texture2D" uid="uid://0ey5yf66sn4g" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack11.png" id="14_41s43"]
-[ext_resource type="Texture2D" uid="uid://c072g5vd05d5c" path="res://assets/characters/killren/killren_basic_atack/killren_basic_atack12.png" id="15_mt1ld"]
-[ext_resource type="Texture2D" uid="uid://cfti07ln61ay3" path="res://assets/characters/killren/killren_breath/killren_breath2.png" id="17_5tu1h"]
-[ext_resource type="Texture2D" uid="uid://bxd3vfqasxko4" path="res://assets/characters/killren/killren_jump/killren_jump2.png" id="20_c8qpr"]
-[ext_resource type="Texture2D" uid="uid://uq6jh0uyoe6o" path="res://assets/characters/killren/killren_jump/killren_jump3.png" id="21_3kyhe"]
-[ext_resource type="Texture2D" uid="uid://dysbrpwyd5v6t" path="res://assets/characters/killren/killren_jump/killren_jump4.png" id="22_vy7na"]
-[ext_resource type="Texture2D" uid="uid://583jqg16tvcf" path="res://assets/characters/killren/killren_jump/killren_jump5.png" id="23_8cfsb"]
-[ext_resource type="Texture2D" uid="uid://dmxxqdegr7u3e" path="res://assets/characters/killren/killren_jump/killren_jump6.png" id="24_1r1c3"]
-[ext_resource type="Texture2D" uid="uid://oyglu7vps7uv" path="res://assets/characters/killren/killren_jump/killren_jump7.png" id="25_7bn22"]
-[ext_resource type="Texture2D" uid="uid://wn38cvcjov7l" path="res://assets/characters/killren/killren_jump/killren_jump8.png" id="26_sp474"]
-[ext_resource type="Texture2D" uid="uid://0uaplq7v2kg1" path="res://assets/characters/killren/killren_jump/killren_jump9.png" id="27_41s43"]
-[ext_resource type="Texture2D" uid="uid://cwind7m0fbmjx" path="res://assets/characters/killren/killren_jump/killren_jump10.png" id="28_mt1ld"]
-[ext_resource type="Texture2D" uid="uid://vgdoxcppjllo" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock1.png" id="37_7ert3"]
-[ext_resource type="Texture2D" uid="uid://nyass3sa0jj7" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock2.png" id="38_5tu1h"]
-[ext_resource type="Texture2D" uid="uid://bbf4078ednbni" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock3.png" id="39_rf6df"]
-[ext_resource type="Texture2D" uid="uid://bfge572deyo0g" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock4.png" id="40_c8qpr"]
-[ext_resource type="Texture2D" uid="uid://jo1yk508034f" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock5.png" id="41_3kyhe"]
-[ext_resource type="Texture2D" uid="uid://yfpvc233o4lm" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock6.png" id="42_vy7na"]
-[ext_resource type="Texture2D" uid="uid://cpwddqtf6opts" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock7.png" id="43_8cfsb"]
-[ext_resource type="Texture2D" uid="uid://coxsvxxjapn0e" path="res://assets/characters/killren/killren_wak/killren_wak1.png" id="43_rf6df"]
-[ext_resource type="Texture2D" uid="uid://doyhe7veok8xa" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock8.png" id="44_1r1c3"]
-[ext_resource type="Texture2D" uid="uid://26fc5gmgutss" path="res://assets/characters/killren/killren_wak/killren_wak2.png" id="44_c8qpr"]
-[ext_resource type="Texture2D" uid="uid://cnmipm6x0mpj8" path="res://assets/characters/killren/killren_wak/killren_wak3.png" id="45_3kyhe"]
-[ext_resource type="Texture2D" uid="uid://bmgepv44jfh1e" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock9.png" id="45_7bn22"]
-[ext_resource type="Texture2D" uid="uid://bqan1yqht2ddg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock10.png" id="46_sp474"]
-[ext_resource type="Texture2D" uid="uid://brijxfbs6qopw" path="res://assets/characters/killren/killren_wak/killren_wak4.png" id="46_vy7na"]
-[ext_resource type="Texture2D" uid="uid://b2abeajnwjyx7" path="res://assets/characters/killren/killren_wak/killren_wak5.png" id="47_8cfsb"]
-[ext_resource type="Texture2D" uid="uid://bro514c8dm0bl" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock11.png" id="47_41s43"]
-[ext_resource type="Texture2D" uid="uid://dkxlj4qbp4wmx" path="res://assets/characters/killren/killren_wak/killren_wak6.png" id="48_1r1c3"]
-[ext_resource type="Texture2D" uid="uid://bxc8lgj861w1p" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock12.png" id="48_mt1ld"]
-[ext_resource type="Texture2D" uid="uid://deu2pdubmx4gg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock13.png" id="49_5m1r0"]
-[ext_resource type="Texture2D" uid="uid://wypjcg4fu0ml" path="res://assets/characters/killren/killren_wak/killren_wak7.png" id="49_7bn22"]
-[ext_resource type="Texture2D" uid="uid://cnfuj6ukd36kt" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock14.png" id="50_cs5to"]
-[ext_resource type="Texture2D" uid="uid://d1abloys4j21l" path="res://assets/characters/killren/killren_wak/killren_wak8.png" id="50_sp474"]
-[ext_resource type="Texture2D" uid="uid://ja3qodm3g4qe" path="res://assets/characters/killren/killren_wak/killren_wak9.png" id="51_41s43"]
-[ext_resource type="Texture2D" uid="uid://de0udmee56ex8" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock15.png" id="51_vq5x7"]
-[ext_resource type="Texture2D" uid="uid://ccwlxphb7nd48" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock16.png" id="52_c6gyj"]
-[ext_resource type="Texture2D" uid="uid://t40my8ckaxsy" path="res://assets/characters/killren/killren_wak/killren_wak10.png" id="52_mt1ld"]
+[ext_resource type="Texture2D" uid="uid://c0iabydl5ece7" path="res://assets/characters/diabunny/diabunny_idle/diabunny_idle1.png" id="2_7bn22"]
+[ext_resource type="Texture2D" uid="uid://dgojyfwk4yusc" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo1.png" id="4_c8qpr"]
+[ext_resource type="Texture2D" uid="uid://dtsrop770kqk0" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo2.png" id="5_3kyhe"]
+[ext_resource type="Texture2D" uid="uid://cci2etk131poa" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo3.png" id="6_vy7na"]
+[ext_resource type="Texture2D" uid="uid://hmb6x5xoewv0" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo4.png" id="7_8cfsb"]
+[ext_resource type="Texture2D" uid="uid://brjutuiu1nxvd" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo5.png" id="8_rf6df"]
+[ext_resource type="Texture2D" uid="uid://c5vqh2lux7fqv" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo6.png" id="9_c8qpr"]
+[ext_resource type="Texture2D" uid="uid://brrhtx8v14s3n" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo7.png" id="10_3kyhe"]
+[ext_resource type="Texture2D" uid="uid://3wfaksgav88r" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo8.png" id="11_vy7na"]
+[ext_resource type="Texture2D" uid="uid://cdl0xf8yke4cx" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo9.png" id="12_8cfsb"]
+[ext_resource type="Texture2D" uid="uid://wh47qdwxibod" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo10.png" id="13_1r1c3"]
+[ext_resource type="Texture2D" uid="uid://cbpqisk6v7elj" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo11.png" id="14_7bn22"]
+[ext_resource type="Texture2D" uid="uid://cr8ed4abt0i7s" path="res://assets/characters/diabunny/diabunny_basic_combo/diabunny_basic_combo12.png" id="15_sp474"]
+[ext_resource type="Texture2D" uid="uid://ctcpj818ov1gp" path="res://assets/characters/diabunny/diabunny_idle/diabunny_idle2.png" id="19_sp474"]
+[ext_resource type="Texture2D" uid="uid://c1uof3xotli42" path="res://assets/characters/diabunny/diabunny_idle/diabunny_idle3.png" id="20_41s43"]
+[ext_resource type="Texture2D" uid="uid://cgnkqece5il25" path="res://assets/characters/diabunny/diabunny_idle/diabunny_idle4.png" id="21_mt1ld"]
+[ext_resource type="Texture2D" uid="uid://cske6v7c8jpn5" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump1.png" id="22_vy7na"]
+[ext_resource type="Texture2D" uid="uid://bka1eanlk26uh" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump2.png" id="23_8cfsb"]
+[ext_resource type="Texture2D" uid="uid://dll48fubusnug" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump3.png" id="24_1r1c3"]
+[ext_resource type="Texture2D" uid="uid://c8wmsfcdw8oyp" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump4.png" id="25_7bn22"]
+[ext_resource type="Texture2D" uid="uid://bybe8qty1hu1p" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump5.png" id="26_sp474"]
+[ext_resource type="Texture2D" uid="uid://cpkbs48y7apgx" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump6.png" id="27_41s43"]
+[ext_resource type="Texture2D" uid="uid://bets0ql7yjjtg" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump7.png" id="28_mt1ld"]
+[ext_resource type="Texture2D" uid="uid://bab2t0mnq2vhi" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump8.png" id="29_5m1r0"]
+[ext_resource type="Texture2D" uid="uid://vgdoxcppjllo" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock1.png" id="29_rf6df"]
+[ext_resource type="Texture2D" uid="uid://nyass3sa0jj7" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock2.png" id="30_c8qpr"]
+[ext_resource type="Texture2D" uid="uid://k54bgarixb1p" path="res://assets/characters/diabunny/diabunny_jump/diabunny_jump9.png" id="30_cs5to"]
+[ext_resource type="Texture2D" uid="uid://bbf4078ednbni" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock3.png" id="31_3kyhe"]
+[ext_resource type="Texture2D" uid="uid://bfge572deyo0g" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock4.png" id="32_vy7na"]
+[ext_resource type="Texture2D" uid="uid://jo1yk508034f" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock5.png" id="33_8cfsb"]
+[ext_resource type="Texture2D" uid="uid://yfpvc233o4lm" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock6.png" id="34_1r1c3"]
+[ext_resource type="Texture2D" uid="uid://cpwddqtf6opts" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock7.png" id="35_7bn22"]
+[ext_resource type="Texture2D" uid="uid://doyhe7veok8xa" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock8.png" id="36_sp474"]
+[ext_resource type="Texture2D" uid="uid://bmgepv44jfh1e" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock9.png" id="37_41s43"]
+[ext_resource type="Texture2D" uid="uid://bqan1yqht2ddg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock10.png" id="38_mt1ld"]
+[ext_resource type="Texture2D" uid="uid://bro514c8dm0bl" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock11.png" id="39_5m1r0"]
+[ext_resource type="Texture2D" uid="uid://bxc8lgj861w1p" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock12.png" id="40_cs5to"]
+[ext_resource type="Texture2D" uid="uid://deu2pdubmx4gg" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock13.png" id="41_vq5x7"]
+[ext_resource type="Texture2D" uid="uid://cnfuj6ukd36kt" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock14.png" id="42_c6gyj"]
+[ext_resource type="Texture2D" uid="uid://de0udmee56ex8" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock15.png" id="43_imk20"]
+[ext_resource type="Texture2D" uid="uid://bqgfjb5r0nh0b" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk1.png" id="44_5tu1h"]
+[ext_resource type="Texture2D" uid="uid://ccwlxphb7nd48" path="res://assets/characters/diabunny/diabunny_rock/diabunny_rock16.png" id="44_7dgfg"]
+[ext_resource type="Texture2D" uid="uid://dnoltn12tjpl3" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk2.png" id="45_rf6df"]
+[ext_resource type="Texture2D" uid="uid://cth1eqdm4m57d" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk3.png" id="46_c8qpr"]
+[ext_resource type="Texture2D" uid="uid://b3cc430u1x5l2" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk4.png" id="47_3kyhe"]
+[ext_resource type="Texture2D" uid="uid://f1g20yy30is0" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk5.png" id="48_vy7na"]
+[ext_resource type="Texture2D" uid="uid://cf5igsmly3s0t" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk6.png" id="49_8cfsb"]
+[ext_resource type="Texture2D" uid="uid://c3amcq80yu0v3" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk7.png" id="50_1r1c3"]
+[ext_resource type="Texture2D" uid="uid://cs2xk0dn57gry" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk8.png" id="51_7bn22"]
 [ext_resource type="Script" uid="uid://ckcbc1rg8ek82" path="res://scripts/state_machine.gd" id="52_shts6"]
+[ext_resource type="Texture2D" uid="uid://dao5wewxx0kyo" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk9.png" id="52_sp474"]
 [ext_resource type="Script" uid="uid://bs0loe31o220t" path="res://scripts/hitbox.gd" id="53_7ert3"]
+[ext_resource type="Texture2D" uid="uid://6lxg3wm5elw5" path="res://assets/characters/diabunny/diabunny_walk/diabunny_walk10.png" id="53_41s43"]
 [ext_resource type="Script" uid="uid://clw25os3cbvq5" path="res://scripts/diabunny_idle.gd" id="53_ts2rf"]
 [ext_resource type="Texture2D" uid="uid://dx5a16vq6u7a6" path="res://assets/characters/diabunny/diabunny_dash/diabunny_walk6.png" id="54_5tu1h"]
 [ext_resource type="Script" uid="uid://dfgymo5yg5kf5" path="res://scripts/diabunny_jump.gd" id="54_hdmh4"]
@@ -81,7 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_7ert3")]
+"values": [ExtResource("2_7bn22")]
 }
 
 [sub_resource type="Animation" id="Animation_hdmh4"]
@@ -94,10 +96,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("4_7ert3"), ExtResource("5_5tu1h"), ExtResource("6_rf6df"), ExtResource("7_c8qpr"), ExtResource("8_3kyhe"), ExtResource("9_vy7na")]
+"values": [ExtResource("4_c8qpr"), ExtResource("5_3kyhe"), ExtResource("6_vy7na"), ExtResource("7_8cfsb")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -106,20 +108,17 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.133333, 0.266667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
 "values": [{
 "args": [2],
-"method": &"move_front"
-}, {
-"args": [-2],
 "method": &"move_front"
 }]
 }
 
 [sub_resource type="Animation" id="Animation_c8qpr"]
 resource_name = "basic_attack_2"
-length = 0.2667
+length = 0.4
 step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -128,10 +127,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("9_vy7na"), ExtResource("10_8cfsb"), ExtResource("11_1r1c3"), ExtResource("12_7bn22")]
+"values": [ExtResource("7_8cfsb"), ExtResource("8_rf6df"), ExtResource("9_c8qpr"), ExtResource("10_3kyhe")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -140,13 +139,10 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0666667, 0.133333, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [-3],
-"method": &"move_front"
-}, {
-"args": [-2],
+"args": [3],
 "method": &"move_front"
 }, {
 "args": [-3],
@@ -154,9 +150,9 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_3kyhe"]
+[sub_resource type="Animation" id="Animation_7bn22"]
 resource_name = "basic_attack_3"
-length = 0.2667
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -164,30 +160,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("13_sp474"), ExtResource("14_41s43"), ExtResource("15_mt1ld"), ExtResource("4_7ert3")]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.133333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"values": [{
-"args": [3],
-"method": &"move_front"
-}, {
-"args": [3],
-"method": &"move_front"
-}, {
-"args": [3],
-"method": &"move_front"
-}]
+"values": [ExtResource("10_3kyhe"), ExtResource("11_vy7na"), ExtResource("12_8cfsb"), ExtResource("13_1r1c3"), ExtResource("14_7bn22"), ExtResource("15_sp474")]
 }
 
 [sub_resource type="Animation" id="Animation_vy7na"]
@@ -208,7 +184,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_7ert3"]
 resource_name = "idle"
-length = 0.133
+length = 0.2666
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -217,15 +193,15 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_7ert3"), ExtResource("17_5tu1h")]
+"values": [ExtResource("2_7bn22"), ExtResource("19_sp474"), ExtResource("20_41s43"), ExtResource("21_mt1ld")]
 }
 
 [sub_resource type="Animation" id="Animation_5tu1h"]
 resource_name = "jump"
-length = 0.6666
+length = 0.6
 step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -234,15 +210,15 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.066667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.066667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("4_7ert3"), ExtResource("20_c8qpr"), ExtResource("21_3kyhe"), ExtResource("22_vy7na"), ExtResource("23_8cfsb"), ExtResource("24_1r1c3"), ExtResource("25_7bn22"), ExtResource("26_sp474"), ExtResource("27_41s43"), ExtResource("28_mt1ld")]
+"values": [ExtResource("22_vy7na"), ExtResource("23_8cfsb"), ExtResource("24_1r1c3"), ExtResource("25_7bn22"), ExtResource("26_sp474"), ExtResource("27_41s43"), ExtResource("28_mt1ld"), ExtResource("29_5m1r0"), ExtResource("30_cs5to")]
 }
 
 [sub_resource type="Animation" id="Animation_imk20"]
 resource_name = "skill"
-length = 1.1
+length = 1.0666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -253,7 +229,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6, 0.665012, 0.733333, 0.8, 0.866667, 0.933333, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("37_7ert3"), ExtResource("38_5tu1h"), ExtResource("39_rf6df"), ExtResource("40_c8qpr"), ExtResource("41_3kyhe"), ExtResource("42_vy7na"), ExtResource("43_8cfsb"), ExtResource("44_1r1c3"), ExtResource("45_7bn22"), ExtResource("46_sp474"), ExtResource("47_41s43"), ExtResource("48_mt1ld"), ExtResource("49_5m1r0"), ExtResource("50_cs5to"), ExtResource("51_vq5x7"), ExtResource("52_c6gyj")]
+"values": [ExtResource("29_rf6df"), ExtResource("30_c8qpr"), ExtResource("31_3kyhe"), ExtResource("32_vy7na"), ExtResource("33_8cfsb"), ExtResource("34_1r1c3"), ExtResource("35_7bn22"), ExtResource("36_sp474"), ExtResource("37_41s43"), ExtResource("38_mt1ld"), ExtResource("39_5m1r0"), ExtResource("40_cs5to"), ExtResource("41_vq5x7"), ExtResource("42_c6gyj"), ExtResource("43_imk20"), ExtResource("44_7dgfg")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -278,7 +254,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_rf6df"]
 resource_name = "walk"
-length = 0.6667
+length = 0.6666
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -290,7 +266,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("43_rf6df"), ExtResource("44_c8qpr"), ExtResource("45_3kyhe"), ExtResource("46_vy7na"), ExtResource("47_8cfsb"), ExtResource("48_1r1c3"), ExtResource("49_7bn22"), ExtResource("50_sp474"), ExtResource("51_41s43"), ExtResource("52_mt1ld")]
+"values": [ExtResource("44_5tu1h"), ExtResource("45_rf6df"), ExtResource("46_c8qpr"), ExtResource("47_3kyhe"), ExtResource("48_vy7na"), ExtResource("49_8cfsb"), ExtResource("50_1r1c3"), ExtResource("51_7bn22"), ExtResource("52_sp474"), ExtResource("53_41s43")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_terya"]
@@ -298,7 +274,7 @@ _data = {
 &"RESET": SubResource("Animation_m1tbd"),
 &"basic_attack_1": SubResource("Animation_hdmh4"),
 &"basic_attack_2": SubResource("Animation_c8qpr"),
-&"basic_attack_3": SubResource("Animation_3kyhe"),
+&"basic_attack_3": SubResource("Animation_7bn22"),
 &"dash": SubResource("Animation_vy7na"),
 &"idle": SubResource("Animation_7ert3"),
 &"jump": SubResource("Animation_5tu1h"),
@@ -314,7 +290,7 @@ collision_layer = 0
 script = ExtResource("1_rp3ui")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ert3")
+texture = ExtResource("2_7bn22")
 flip_h = true
 
 [node name="Hitbox" type="Area2D" parent="Sprite2D"]
