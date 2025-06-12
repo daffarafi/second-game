@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func start_game():
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/prelogue.tscn")
 
 # Keep the GUI input function as backup
 func _on_gui_input(event: InputEvent) -> void:

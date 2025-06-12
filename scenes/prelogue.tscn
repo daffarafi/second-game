@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://u088u61dnvwl"]
+
+[ext_resource type="Script" uid="uid://drjujvw4fpcib" path="res://scripts/prelogue.gd" id="1_alqm3"]
+[ext_resource type="Texture2D" uid="uid://dwxv06pfrjl6g" path="res://assets/start_menu_bg.png" id="1_jary8"]
+[ext_resource type="Texture2D" uid="uid://b7wpf5ngwmjix" path="res://assets/images/prologue/scene1.png" id="2_5sdm1"]
+[ext_resource type="FontFile" uid="uid://wne8c5ccngmu" path="res://assets/fonts/PixelOperator8.ttf" id="2_alqm3"]
+[ext_resource type="FontFile" uid="uid://bfe1bgoa4dihj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_rfxyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pv5f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Prelogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_alqm3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StoryContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IllustrationPanel" type="Panel" parent="StoryContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StoryImage" type="TextureRect" parent="StoryContainer/IllustrationPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sdm1")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="DialogPanel" type="Panel" parent="StoryContainer/IllustrationPanel"]
+custom_minimum_size = Vector2(800, 150)
+layout_mode = 2
+offset_left = 176.0
+offset_top = 498.0
+offset_right = 976.0
+offset_bottom = 648.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_0pv5f")
+
+[node name="StoryText" type="RichTextLabel" parent="StoryContainer/IllustrationPanel/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 33.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("2_alqm3")
+theme_override_fonts/bold_font = ExtResource("4_rfxyc")
+text = "Lorem Ipsum Dolor sit Amet"
+horizontal_alignment = 1
+
+[node name="ContinueLabel" type="Label" parent="StoryContainer/IllustrationPanel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_alqm3")
+theme_override_font_sizes/font_size = 16
+text = "press anything to continue"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_jary8")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 60
+
+[node name="PressAnywhereToStartLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_alqm3")
+text = "press anywhere to start"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
