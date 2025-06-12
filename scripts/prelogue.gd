@@ -4,6 +4,8 @@ extends Control
 @onready var story_text = $StoryContainer/IllustrationPanel/DialogPanel/StoryText
 @onready var continue_label = $StoryContainer/IllustrationPanel/ContinueLabel
 @onready var audio_player = $AudioStreamPlayer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var black_screen: ColorRect = $BlackScreen
 
 var current_scene_index = 0
 var current_part_index = 0  # Track which part of the scene we're on
@@ -90,6 +92,9 @@ var story_scenes = [
 ]
 
 func _ready():
+	# Play fade in animation first
+	animation_player.play("fade_to_normal")
+	
 	# Setup initial state
 	continue_label.visible = false
 	setup_continue_label_animation()
@@ -241,10 +246,8 @@ func next_scene():
 
 func end_prologue():
 	print("Prologue finished!")
-	# Transition to game
-	var fade_tween = create_tween()
-	fade_tween.tween_property(self, "modulate:a", 0.0, 1.0)
-	fade_tween.tween_callback(func(): get_tree().change_scene_to_file("res://scenes/game.tscn"))
+	# Play fade to black animation, scene change akan dipanggil setelah animation selesai
+	animation_player.play("fade_to_black")
 
 func setup_continue_label_animation():
 	# Reuse the flashing animation from your existing label
@@ -253,3 +256,11 @@ func setup_continue_label_animation():
 	
 	fade_tween.tween_property(continue_label, "modulate:a", 0.3, 0.5)
 	fade_tween.tween_property(continue_label, "modulate:a", 1.0, 0.5)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_to_normal":
+		# Fade in selesai, black_screen sudah tidak terlihat
+		pass
+	elif anim_name == "fade_to_black":
+		# Fade out selesai, sekarang pindah scene
+		get_tree().change_scene_to_file("res://scenes/game.tscn")

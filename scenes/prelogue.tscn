@@ -1,13 +1,64 @@
-[gd_scene load_steps=7 format=3 uid="uid://u088u61dnvwl"]
+[gd_scene load_steps=10 format=3 uid="uid://u088u61dnvwl"]
 
 [ext_resource type="Script" uid="uid://drjujvw4fpcib" path="res://scripts/prelogue.gd" id="1_alqm3"]
-[ext_resource type="Texture2D" uid="uid://dwxv06pfrjl6g" path="res://assets/start_menu_bg.png" id="1_jary8"]
 [ext_resource type="Texture2D" uid="uid://b7wpf5ngwmjix" path="res://assets/images/prologue/scene1.png" id="2_5sdm1"]
 [ext_resource type="FontFile" uid="uid://wne8c5ccngmu" path="res://assets/fonts/PixelOperator8.ttf" id="2_alqm3"]
 [ext_resource type="FontFile" uid="uid://bfe1bgoa4dihj" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_rfxyc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pv5f"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_r2jwc"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hm208"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5pab1"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5pab1"]
+_data = {
+&"RESET": SubResource("Animation_hm208"),
+&"fade_to_black": SubResource("Animation_r2jwc"),
+&"fade_to_normal": SubResource("Animation_5pab1")
+}
 
 [node name="Prelogue" type="Control"]
 layout_mode = 3
@@ -93,31 +144,18 @@ text = "press anything to continue"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-visible = false
+[node name="BlackScreen" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0)
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-layout_mode = 2
-texture = ExtResource("1_jary8")
-expand_mode = 2
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5pab1")
+}
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/separation = 60
-
-[node name="PressAnywhereToStartLabel" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_alqm3")
-text = "press anywhere to start"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
