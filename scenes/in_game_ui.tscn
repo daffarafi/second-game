@@ -1,6 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b545wwad3og0r"]
+[gd_scene load_steps=8 format=3 uid="uid://b545wwad3og0r"]
 
+[ext_resource type="Script" uid="uid://csf1ibvy8bgqc" path="res://scripts/popup_menu.gd" id="1_fqvwy"]
 [ext_resource type="Texture2D" uid="uid://bg4i56h8pnexy" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kplmn"]
+[ext_resource type="Script" uid="uid://blgyts532k63c" path="res://scripts/stat_display.gd" id="2_a45jx"]
+[ext_resource type="FontFile" uid="uid://j2frh4xaf8bj" path="res://assets/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_fnge6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ria60"]
+texture = ExtResource("1_kplmn")
+texture_margin_left = 2.0
+texture_margin_right = 2.0
+region_rect = Rect2(626, 294, 12, 4)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fnge6"]
 texture = ExtResource("1_kplmn")
@@ -18,26 +27,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PopupMenu" type="MarginContainer" parent="."]
+[node name="PopupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "open_menu_screen")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fqvwy")
+menu_screen = NodePath("VBoxContainer")
+open_menu_screen = NodePath("VBoxContainer2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PopupMenu"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_constants/separation = 11
+theme_override_constants/separation = 32
 
 [node name="BaseMenuScreen" type="MarginContainer" parent="PopupMenu/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="PopupMenu/VBoxContainer/BaseMenuScreen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Button" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer"]
+custom_minimum_size = Vector2(50, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_ria60")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer"]
 custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 texture = ExtResource("1_kplmn")
@@ -47,53 +71,85 @@ patch_margin_top = 4
 patch_margin_right = 4
 patch_margin_bottom = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect"]
+[node name="MarginContainer" type="MarginContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect"]
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -124.0
-offset_top = -62.0
-offset_bottom = 62.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Button" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_styles/hover = SubResource("StyleBoxTexture_fnge6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_a45jx")
 theme_override_styles/normal = SubResource("StyleBoxTexture_a45jx")
 
-[node name="Button2" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Button3" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button3" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
-[node name="Button4" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button4" type="Button" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+script = ExtResource("2_a45jx")
+
+[node name="Label" type="Label" parent="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
+theme_override_colors/font_outline_color = Color(0.666667, 0.47451, 0.34902, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_fnge6")
+theme_override_font_sizes/font_size = 36
+text = "COINS"
 
 [node name="Separator" type="Control" parent="PopupMenu/VBoxContainer"]
 layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopupMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="PopupMenu/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_ria60")
+
+[node name="Separator" type="Control" parent="PopupMenu/VBoxContainer2"]
+layout_mode = 2
+
+[connection signal="pressed" from="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/Button" to="PopupMenu" method="_on_button_pressed"]
+[connection signal="pressed" from="PopupMenu/VBoxContainer2/Button" to="PopupMenu" method="_on_button_pressed"]
