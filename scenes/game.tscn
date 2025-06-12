@@ -1,51 +1,179 @@
-[gd_scene load_steps=7 format=3 uid="uid://cim23pyqwtmwl"]
+[gd_scene load_steps=8 format=4 uid="uid://cim23pyqwtmwl"]
 
-[ext_resource type="PackedScene" uid="uid://dtn1v60fieh6b" path="res://scenes/aura.tscn" id="1_iywne"]
-[ext_resource type="Script" uid="uid://ws248wdardhl" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://ci48mprla4m3d" path="res://assets/Legacy Collection/Assets/Packs/Warped City/V2/Environmet/background/back.png" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://dn7kr853w421m" path="res://assets/Legacy Collection/Assets/Packs/Warped City/V2/Environmet/tileset.png" id="3_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://c8woge8klkdhi" path="res://scenes/kast.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dcvm45sgidy16" path="res://scenes/diabunny.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cn8vxw4dc0ltm" path="res://assets/Legacy Collection/Assets/Packs/Warped City/V2/Environmet/background/middle.png" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://baf2bpm8bde55" path="res://assets/Legacy Collection/Assets/Packs/Warped City/V2/Environmet/background/front.png" id="5_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("3_lbhrr")
-11:1/size_in_atlas = Vector2i(4, 3)
-11:1/0 = 0
-22:1/size_in_atlas = Vector2i(6, 6)
-22:1/0 = 0
-22:1/0/texture_origin = Vector2i(0, 8)
-29:1/size_in_atlas = Vector2i(9, 6)
-29:1/0 = 0
-29:1/0/texture_origin = Vector2i(0, 8)
-17:1/size_in_atlas = Vector2i(4, 3)
-17:1/0 = 0
-11:5/size_in_atlas = Vector2i(6, 3)
-11:5/0 = 0
-0:1/size_in_atlas = Vector2i(10, 6)
+0:1/size_in_atlas = Vector2i(12, 6)
 0:1/0 = 0
-0:1/0/texture_origin = Vector2i(0, 8)
+0:1/0/texture_origin = Vector2i(0, -24)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-96, -16, 96, -16, 96, 16, -96, 16)
+13:1/size_in_atlas = Vector2i(4, 3)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 16, -32, 16)
+18:1/size_in_atlas = Vector2i(4, 3)
+18:1/0 = 0
+12:5/size_in_atlas = Vector2i(6, 3)
+12:5/0 = 0
+23:1/size_in_atlas = Vector2i(6, 6)
+23:1/0 = 0
+30:1/size_in_atlas = Vector2i(9, 6)
+30:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_p57ef"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_lbhrr")
-
-[node name="Aura" parent="." instance=ExtResource("1_iywne")]
-position = Vector2(0, -47)
-
-[node name="Camera2D" type="Camera2D" parent="Aura"]
-position = Vector2(103, -89)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(0, 16)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 11, 0, 1, 0, 0, 0, 8, 0, 0, 0, 0, 0, 11, 0, 1, 0, 0, 0, 15, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+position = Vector2(-83, 34)
+tile_map_data = PackedByteArray("AAAFAAAAAAAAAAEAAAANAAAAAAANAAEAAAAVAAAAAAAAAAEAAAAdAAAAAAANAAEAAADl/wAAAAAAAAEAAADt/wAAAAANAAEAAAD1/wAAAAAAAAEAAAD9/wAAAAANAAEAAAAlAAAAAAAAAAEAAAAtAAAAAAANAAEAAAA1AAAAAAAAAAEAAAA9AAAAAAANAAEAAABFAAAAAAAAAAEAAABNAAAAAAANAAEAAABVAAAAAAAAAAEAAABdAAAAAAANAAEAAACl/wAAAAAAAAEAAACt/wAAAAANAAEAAAC1/wAAAAAAAAEAAAC9/wAAAAANAAEAAADF/wAAAAAAAAEAAADN/wAAAAANAAEAAADV/wAAAAAAAAEAAADd/wAAAAANAAEAAAA=")
 tile_set = SubResource("TileSet_p57ef")
 
-[node name="kast" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(80, -23)
+[node name="Diabunny" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(18, -16)
 
-[node name="Kast" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(-80, -29)
-scale = Vector2(-1, 1)
+[node name="Camera2D" type="Camera2D" parent="Diabunny"]
+position = Vector2(-4, -60)
+zoom = Vector2(2.1, 2.1)
+limit_top = -240
+position_smoothing_enabled = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-263, -3)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(96, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(192, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(288, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(384, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(480, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(576, -58)
+texture = ExtResource("3_iywne")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-264, -5)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(672, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(96, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(192, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(288, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(384, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(480, -58)
+texture = ExtResource("3_iywne")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(576, -58)
+texture = ExtResource("3_iywne")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-202, 4)
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0, -59)
+texture = ExtResource("4_p57ef")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(144, -59)
+texture = ExtResource("4_p57ef")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(288, -59)
+texture = ExtResource("4_p57ef")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(432, -59)
+texture = ExtResource("4_p57ef")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-206, -20)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(816, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(49, -32)
+texture = ExtResource("5_u5sy4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(321, -32)
+texture = ExtResource("5_u5sy4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(593, -32)
+texture = ExtResource("5_u5sy4")

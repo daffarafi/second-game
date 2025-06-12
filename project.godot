@@ -16,13 +16,18 @@ warnings/check_angle_interpolation_type_conflicting=false
 [application]
 
 config/name="Second Game"
-run/main_scene="uid://cim23pyqwtmwl"
+run/main_scene="uid://b545wwad3og0r"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 CharacterManager="*res://scripts/CharacterManager.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 
