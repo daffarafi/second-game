@@ -151,5 +151,34 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ria60")
 [node name="Separator" type="Control" parent="PopupMenu/VBoxContainer2"]
 layout_mode = 2
 
+[node name="MarginContainer" type="MarginContainer" parent="PopupMenu"]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PopupMenu/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_kplmn")
+region_rect = Rect2(742, 39, 18, 18)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="PopupMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_fnge6")
+theme_override_font_sizes/font_size = 36
+text = "HOW TO PLAY"
+
 [connection signal="pressed" from="PopupMenu/VBoxContainer/BaseMenuScreen/VBoxContainer/Button" to="PopupMenu" method="_on_button_pressed"]
 [connection signal="pressed" from="PopupMenu/VBoxContainer2/Button" to="PopupMenu" method="_on_button_pressed"]

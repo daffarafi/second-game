@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu21sr54nutp7"]
+
+[ext_resource type="Script" uid="uid://cqfsj3o1maqgx" path="res://scripts/start_screen.gd" id="1_o7i0r"]
+[ext_resource type="Texture2D" uid="uid://dwxv06pfrjl6g" path="res://assets/start_menu_bg.png" id="1_tx5wa"]
+[ext_resource type="FontFile" uid="uid://wne8c5ccngmu" path="res://assets/fonts/PixelOperator8.ttf" id="3_he1sj"]
+[ext_resource type="Script" uid="uid://du3iq2pt21fa4" path="res://scripts/press_anywhere_to_start_label.gd" id="4_r2jwc"]
+
+[sub_resource type="Theme" id="Theme_o7i0r"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_o7i0r")
+script = ExtResource("1_o7i0r")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_tx5wa")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 93
+
+[node name="PressAnywhereToStartLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_he1sj")
+text = "press anywhere to start"
+horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("4_r2jwc")
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

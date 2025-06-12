@@ -15,8 +15,8 @@ warnings/check_angle_interpolation_type_conflicting=false
 
 [application]
 
-config/name="Second Game"
-run/main_scene="uid://b545wwad3og0r"
+config/name="Project Trinity"
+run/main_scene="uid://cu21sr54nutp7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
